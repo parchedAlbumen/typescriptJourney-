@@ -1,0 +1,6 @@
+I learned up to m3-> continue in m4 
+- i only know up to interfaces,,, 
+
+- practice the basics that I know currently:
+1. todolist app 
+2. food ordering system.
