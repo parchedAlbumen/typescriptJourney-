@@ -1,7 +1,15 @@
 class TaskManager {
     tasks: Task[] = [];
 
-    addTask(task: Task) {
+    addTask(title: string, priority: Priority, dueDate?: string) {
+        const task: Task = {
+            id: this.tasks.length + 1,
+            title,
+            priority,
+            dueDate,
+            status: Status.Todo
+        };
+    
         this.tasks.push(task);
     }
 
@@ -18,7 +26,7 @@ class TaskManager {
         
         console.log("ID does not exist!");
         return;
-    }
+    }   
 
     filterByStatus(status: Status) {
         const newTasks: Task[] = [];
@@ -58,6 +66,10 @@ class TaskManager {
             }   
         }
     }
+    
+    getTasks() {
+        return this.tasks;
+    }
 }
 
 interface Task {
@@ -65,7 +77,7 @@ interface Task {
     id: number;
     title: string;
     priority: Priority;
-    dueDate?: String; //question mark makes it optional
+    dueDate?: string; //question mark makes it optional
 }
 
 enum Status {
@@ -79,3 +91,13 @@ enum Priority {
     Medium,
     High
 }
+
+const manager = new TaskManager();
+
+manager.addTask("Buy Groceries", Priority.Low, "2026-05-01");
+manager.addTask("Finish report", Priority.High);
+manager.printTasks(manager.getTasks());
+
+//update check
+manager.updateStatus(1, Status.InProgress);
+manager.printTasks(manager.filterByStatus(Status.InProgress));
