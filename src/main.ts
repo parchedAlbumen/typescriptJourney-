@@ -27,7 +27,7 @@ class TaskManager {
                 newTasks.push(item);
             }
         })
-        
+
         return newTasks;
     }
     
