@@ -47,7 +47,17 @@ class TaskManager {
             console.log(task);
             console.log("\n");
         })
-    }   
+    } 
+    
+    deleteTask(targetId: number) {
+        for (let i = 0; i < this.tasks.length; i++) {
+            const task = this.tasks[i];
+            if (task && task.id === targetId) {
+                this.tasks.splice(i, 1);
+                return;
+            }   
+        }
+    }
 }
 
 interface Task {
