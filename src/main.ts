@@ -34,7 +34,7 @@ class TaskManager {
             if (item.status === status) {
                 newTasks.push(item);
             }
-        })
+        });
 
         return newTasks;
     }
