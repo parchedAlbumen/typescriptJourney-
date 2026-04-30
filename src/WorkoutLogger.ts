@@ -1,6 +1,6 @@
 import type { Session } from "./models/Session";
 
-class WorkoutLogger {
+export class WorkoutLogger {
     private sessions: Session[];
 
     constructor(sessions: Session[]) {

@@ -1,0 +1,21 @@
+{
+  "name": "poswas",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "speedrunning typsecript so i can work on my projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parchedAlbumen/typescriptJourney-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parchedAlbumen/typescriptJourney-/issues"
+  },
+  "homepage": "https://github.com/parchedAlbumen/typescriptJourney-#readme"
+}

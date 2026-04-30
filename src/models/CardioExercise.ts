@@ -1,6 +1,6 @@
 import { Exercise } from "./Exercise";
 
-class CardioExercise extends Exercise {
+export class CardioExercise extends Exercise {
     private distanceKm: number;
 
     constructor(name: string, durationMinutes: number, distanceKm: number) {
@@ -13,7 +13,7 @@ class CardioExercise extends Exercise {
     }
 
     public getSummary(): string {
-        let summary = `${this.getName} - ${this.getDurationMinutes}, ${this.distanceKm}km, ~${this.caloriesBurned} cal`;
+        let summary = `${this.getName()} - ${this.getDurationMinutes()}, ${this.distanceKm}km, ~${this.caloriesBurned()} cal`;
         return summary;
     }
 

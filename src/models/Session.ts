@@ -4,9 +4,9 @@ export class Session {
     private date: string;
     private exercises: Exercise[];
 
-    constructor(date: string, exercises: Exercise[]) {
+    constructor(date: string) {
         this.date = date;
-        this.exercises = exercises;
+        this.exercises = []
     }
 
     public addExercise(exercise: Exercise): void {
@@ -33,7 +33,8 @@ export class Session {
     public printSummary(): void {
         console.log(this.date);
         this.exercises.forEach(exer => {
-            console.log(exer.getSummary);
+            console.log(exer.getSummary());
         })
+        console.log("\n");
     }
 }

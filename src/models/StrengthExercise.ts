@@ -1,6 +1,6 @@
 import { Exercise } from "./Exercise";  
 
-class StrengthExercise extends Exercise {
+export class StrengthExercise extends Exercise {
     private sets: number 
     private reps: number
     private weightKg: number 
@@ -41,6 +41,6 @@ class StrengthExercise extends Exercise {
     }
 
     public getSummary(): string {
-        return `${this.getName()} - ${this.sets}x${this.reps} @ ${this.weightKg}kg, ~${this.caloriesBurned} cal`;
+        return `${this.getName()} - ${this.sets}x${this.reps} @ ${this.weightKg}kg, ~${this.caloriesBurned()} cal`;
     }
 }
